@@ -1,0 +1,35 @@
+@use 'base';
+
+.fade {
+    opacity: 0;
+    transition: all .6s ease;
+}
+
+.about {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    color: base.$font-color;
+    transition: all .6s ease;
+
+    img {
+        width: 420px;
+    }
+}
+
+.about-header {
+    font-size: 3.3rem;
+    color: base.$alt-color;
+    font-family: base.$intro-font;
+    margin: auto;
+}
+
+.about-desc {
+    display: flex;
+    justify-content: space-around;
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+

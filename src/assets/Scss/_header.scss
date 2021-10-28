@@ -1,0 +1,29 @@
+@use 'base';
+
+.header {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: base.$text-font;
+    color: base.$font-color;
+}
+
+.architect-img {
+    width: 400px;
+    height: auto;
+}
+
+.title {
+    font-family: base.$title-font;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.h-desc {
+    font-size: 2rem;
+}
+
+.typed {
+    color: base.$alt-color;
+}

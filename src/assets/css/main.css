@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Condensed:wght@300&family=Zen+Kurenaido&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Zen Kurenaido", sans-serif;
+}
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Zen Kurenaido", sans-serif;
+  color: #58566C;
+}
+
+.architect-img {
+  width: 400px;
+  height: auto;
+}
+
+.title {
+  font-family: "Lobster", cursive;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.h-desc {
+  font-size: 2rem;
+}
+
+.typed {
+  color: #6C63FF;
+}
+
+.intro {
+  background-color: #2d3436;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro .intro-text {
+  color: #b2bec3;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 3rem;
+}
+
+.slider {
+  background-color: #58566C;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateY(100%);
+}
+
+.hide {
+  background-color: #2d3436;
+  overflow: hidden;
+}
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
+.fade {
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.about {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  color: #58566C;
+  transition: all 0.6s ease;
+}
+.about img {
+  width: 420px;
+}
+
+.about-header {
+  font-size: 3.3rem;
+  color: #6C63FF;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: auto;
+}
+
+.about-desc {
+  display: flex;
+  justify-content: space-around;
+}
+.about-desc p {
+  font-size: 1.5rem;
+}
+
+.projects {
+  min-height: 100vh;
+}
+
+/*# sourceMappingURL=main.css.map */

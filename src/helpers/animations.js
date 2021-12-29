@@ -5,7 +5,7 @@ export function Animations() {
 
     tl.to(".i-text", { y: "0%", duration: 1, stagger: .2 });
     tl.to(".slider", { y: "-100%", duration: .8, delay: .5 });
-    tl.to(".intro", { y: "-100%", duration: 1}, "-=1");
+    tl.to(".intro", { y: "-100%", duration: 1}, "-=.95");
 
     // typed.js
     const typed = new Typed('.typed', {

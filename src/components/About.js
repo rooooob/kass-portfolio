@@ -1,7 +1,9 @@
 export function About() {
     const $about = document.createElement("section");
     $about.classList.add("about");
-    $about.dataset.observer = "";
+    $about.id = "about";
+    $about.classList.add("fade");
+    $about.classList.add("from-left");
 
     $about.innerHTML = `
 
@@ -16,5 +18,6 @@ export function About() {
             </div>
         </div>
     `
+
     return $about;
 }

@@ -11,7 +11,7 @@ body {
 }
 
 .header {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -74,11 +74,6 @@ body {
   display: inline-block;
 }
 
-.fade {
-  opacity: 0;
-  transition: all 0.6s ease;
-}
-
 .about {
   min-height: 90vh;
   display: flex;
@@ -106,7 +101,319 @@ body {
 }
 
 .projects {
+  margin-top: 6rem;
   min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects h2 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #6C63FF;
+}
+
+.projects-div {
+  display: flex;
+  width: 95%;
+  height: auto;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  width: 300px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  transform-style: preserve-3d;
+}
+.project-card img {
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  width: 300px;
+  height: 400px;
+}
+.project-card .project-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(29, 28, 28, 0.5);
+  border-top: none;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  transform-style: preserve-3d;
+}
+.project-card p {
+  color: #58566C;
+  font-size: 1.3rem;
+  transform: translateZ(-0.5rem);
+}
+.project-card button {
+  margin-bottom: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  color: #b2bec3;
+  padding: 0.3rem 0.6rem;
+  background-color: #6C63FF;
+  transition: 0.2s ease;
+  transform: translateZ(1rem);
+}
+.project-card button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-bar {
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav-bar a {
+  margin-right: 2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #58566C;
+  transition: all 300ms ease;
+}
+.nav-bar a:hover {
+  color: #6C63FF;
+  opacity: 0.7;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #2d3436;
+}
+.fixed-nav a {
+  color: #b2bec3;
+}
+
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #c6c4d3;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #c6c4d3;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--emphatic {
+  overflow: hidden;
+}
+
+.hamburger--emphatic .hamburger-inner {
+  transition: background-color 0.125s 0.175s ease-in;
+}
+
+.hamburger--emphatic .hamburger-inner::before {
+  left: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in;
+}
+
+.hamburger--emphatic .hamburger-inner::after {
+  top: 10px;
+  right: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in;
+}
+
+.hamburger--emphatic.is-active .hamburger-inner {
+  transition-delay: 0s;
+  transition-timing-function: ease-out;
+  background-color: transparent !important;
+}
+
+.hamburger--emphatic.is-active .hamburger-inner::before {
+  left: -80px;
+  top: -80px;
+  transform: translate3d(80px, 80px, 0) rotate(45deg);
+  transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hamburger--emphatic.is-active .hamburger-inner::after {
+  right: -80px;
+  top: -80px;
+  transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+  transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+input[type=submit] {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+.contact-all {
+  display: flex;
+  width: 95%;
+  height: 80vh;
+  margin: auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact-media {
+  display: flex;
+  flex-direction: column;
+}
+.contact-media a {
+  font-size: 1.5rem;
+  color: #2d3436;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+.contact-media a .uil {
+  color: #6C63FF;
+}
+.contact-media :hover {
+  opacity: 0.6;
+}
+
+.contact {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 1.5rem;
+  color: #2d3436;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form * {
+  margin-top: 1.3rem;
+}
+.contact-form legend {
+  margin: auto;
+  font-size: 2rem;
+  color: #6C63FF;
+  font-weight: 400;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit-container input {
+  padding: 0.5rem 1.8rem;
+  border-radius: 5px;
+  background-color: #6C63FF;
+  color: aliceblue;
+}
+
+input::placeholder, textarea::placeholder {
+  opacity: 0.6;
+  color: #2d3436;
+}
+
+.contact-form-response {
+  color: #6C63FF;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.none {
+  display: none;
+}
+
+.from-left {
+  transform: translateX(-50%);
+}
+
+.from-right {
+  transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+  transition: transform 0.6s ease-in-out;
+}
+
+.appear {
+  transform: translateX(0);
 }
 
 /*# sourceMappingURL=main.css.map */

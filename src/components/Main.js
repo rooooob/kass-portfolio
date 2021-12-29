@@ -1,5 +1,6 @@
 export function Main() {
     const $header = document.createElement("header");
+    $header.id = "home";
     $header.classList.add("header");
 
     $header.innerHTML = `
